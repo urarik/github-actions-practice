@@ -1,0 +1,13 @@
+name: Generate Functions
+on: push
+jobs:
+  logs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "## Example Title" >> "${GITHUB_STEP_SUMMARY}"
+  logs2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "## Example Title2" >> "${GITHUB_STEP_SUMMARY}"
