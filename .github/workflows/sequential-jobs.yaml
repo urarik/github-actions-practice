@@ -1,5 +1,5 @@
-name: Job Summaries
-# on: push
+name: Sequential Jobs
+on: push
 jobs:
   logs:
     runs-on: ubuntu-latest
@@ -8,6 +8,7 @@ jobs:
           echo "## Example Title" >> "${GITHUB_STEP_SUMMARY}"
   logs2:
     runs-on: ubuntu-latest
+    needs: [logs] # needs가 없으면 병렬 처리됨.
     steps:
       - run: |
           echo "## Example Title2" >> "${GITHUB_STEP_SUMMARY}"
