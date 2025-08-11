@@ -1,0 +1,14 @@
+name: Annotation
+on: push
+jobs:
+  logs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::error::this is an error"
+      - run: echo "::warning::this is a warning"
+      - run: echo "::notice::this is a notice"
+      - run: |
+          echo "::group::group start"
+          printenv
+          echo "::endgroup::""
+      - run: echo "Good"
