@@ -1,4 +1,4 @@
-name: Generate Functions
+name: Job Summaries
 on: push
 jobs:
   logs:
