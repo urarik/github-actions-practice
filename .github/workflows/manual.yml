@@ -7,8 +7,16 @@ on:
         default: "Hello"
         required: true
         description: "Greeting message to display"
+      log-level:
+        type: choice
+        options:
+          - info
+          - warning
+          - error
+        default: info
+        description: "Log level for the greeting message"
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ inputs.greeting }}"
+      - run: echo "${{ inputs.log-level }} : ${{ inputs.greeting }}"
