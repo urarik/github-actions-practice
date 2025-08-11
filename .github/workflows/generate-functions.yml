@@ -1,0 +1,10 @@
+name: Generate Functions
+on: push
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - run : 'echo ${{ github.event }}'
+      - run: printenv | grep '_FUNC'
+        env:
+          JOIN_FUNC: ${{ join(github.event.*.html_url, ', ')}}
