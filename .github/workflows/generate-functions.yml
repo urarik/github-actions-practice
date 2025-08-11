@@ -4,7 +4,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - run : 'echo "{{ toJSON(github.event) }}"'
+      - run : 'echo "${JSON}'
       - run: printenv | grep '_FUNC'
         env:
           JOIN_FUNC: ${{ join(github.event.*.html_url, ', ')}}
+          JSON: ${{ toJSON(github.event) }}
