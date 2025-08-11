@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "## Example Title" >> "${GITHUB_STEP_SUMMARY}"
+          echo "## Example Title" >> "${GITHUB_STEP_SUMMARY}"
   logs2:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "## Example Title2" >> "${GITHUB_STEP_SUMMARY}"
+          echo "## Example Title2" >> "${GITHUB_STEP_SUMMARY}"
