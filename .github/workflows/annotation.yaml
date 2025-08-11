@@ -1,5 +1,5 @@
 name: Annotation
-# on: push
+on: push
 jobs:
   logs:
     runs-on: ubuntu-latest
